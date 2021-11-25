@@ -40,7 +40,7 @@ function callApi(jsonData, callback) {
     meddata.overrideMimeType("application/json");
     meddata.open("GET", jsonData, true);
     meddata.onreadystatechange = function () {
-        if (meddata.readyState == 4 && meddata.status == 0) {
+        if (meddata.readyState == 4 && meddata.status == 200) {
             callback(meddata.responseText);
         }
     }
